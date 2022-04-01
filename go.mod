@@ -1,4 +1,4 @@
-module modules
+module github.com/fdurand/freeradius-go-modules
 
 go 1.17
 
