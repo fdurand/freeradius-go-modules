@@ -1,8 +1,6 @@
 package modules
 
 import (
-	"context"
-
 	"github.com/fdurand/freeradius-go"
 )
 
@@ -12,16 +10,16 @@ type CacheEap struct {
 	radlog     freeradius.Log
 }
 
-func NewCacheEap(ctx context.Context, name string) (freeradius.Module, error) {
+func NewCacheEap(name string) (freeradius.Module, error) {
 
 	Module := &CacheEap{}
 	Module.ModuleName = name
-	err := Module.NewModule(ctx, name)
+	err := Module.NewModule(name)
 
 	return Module, err
 }
 
-func (m *CacheEap) NewModule(ctx context.Context, name string) error {
+func (m *CacheEap) NewModule(name string) error {
 	return nil
 }
 
