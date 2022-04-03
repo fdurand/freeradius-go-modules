@@ -1,6 +1,7 @@
 package modules
 
 import (
+	"github.com/davecgh/go-spew/spew"
 	"github.com/fdurand/freeradius-go"
 )
 
@@ -31,5 +32,6 @@ func (m *CacheEap) Init(logger freeradius.Log) error {
 
 func (m *CacheEap) Authorize(req freeradius.Request) freeradius.RlmCode {
 	m.radlog.Info("Authorize in example module called")
+	spew.Dump(req)
 	return freeradius.RlmCodeNoop
 }
