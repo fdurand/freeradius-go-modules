@@ -36,6 +36,10 @@ func (m *CacheEap) Authorize(req freeradius.Request) freeradius.RlmCode {
 	m.radlog.Info("Authorize in example module called")
 	v := reflect.ValueOf(req)
 
+	if v.Kind() == reflect.Ptr {
+		v = v.Elem()
+	}
+
 	values := make([]interface{}, v.NumField())
 
 	for i := 0; i < v.NumField(); i++ {
