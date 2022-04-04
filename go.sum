@@ -1,2 +1,4 @@
+github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
+github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/fdurand/freeradius-go v0.0.0-20220328011046-647883d5095d h1:KFftjWsuunoh4OTXAwX3G952sOx7ZWb/wk1+wXbLhTw=
 github.com/fdurand/freeradius-go v0.0.0-20220328011046-647883d5095d/go.mod h1:4HP18Yu1BRVbs3gzwP4zcKig1dj0vI6shU1zySgfKvk=
