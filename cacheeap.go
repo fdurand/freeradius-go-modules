@@ -32,7 +32,7 @@ func (m *CacheEap) Init(logger freeradius.Log) error {
 
 func (m *CacheEap) Authorize(req freeradius.Request) freeradius.RlmCode {
 	m.radlog.Info("Authorize in cache_eap module called")
-	spew.Dump(req.radRequest.packet)
+	spew.Dump(req.Packet())
 
 	return freeradius.RlmCodeNoop
 }
