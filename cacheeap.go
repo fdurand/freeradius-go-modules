@@ -1,8 +1,6 @@
 package modules
 
 import (
-	"reflect"
-
 	"github.com/davecgh/go-spew/spew"
 	"github.com/fdurand/freeradius-go"
 )
@@ -33,20 +31,8 @@ func (m *CacheEap) Init(logger freeradius.Log) error {
 }
 
 func (m *CacheEap) Authorize(req freeradius.Request) freeradius.RlmCode {
-	m.radlog.Info("Authorize in example module called")
-	v := reflect.ValueOf(req)
-
-	if v.Kind() == reflect.Ptr {
-		v = v.Elem()
-	}
-
-	values := make([]interface{}, v.NumField())
-
-	for i := 0; i < v.NumField(); i++ {
-		values[i] = v.Field(i).Interface()
-	}
-
-	spew.Dump(values)
+	m.radlog.Info("Authorize in cache_eap module called")
+	spew.Dump(req.radRequest.packet)
 
 	return freeradius.RlmCodeNoop
 }
